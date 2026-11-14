@@ -1,0 +1,40 @@
+The Quick Brown Fox and the Go Programming Language.
+
+The quick brown fox jumps over the lazy dog. This classic pangram contains every letter of the English alphabet at least once. It is often used to test typewriters, keyboards, fonts, and now, our Go word counter. The quick brown fox is fast, but is it faster than a goroutine? The lazy dog sleeps, much like a program waiting on a channel.
+
+Go, also known as Golang, is a statically typed, compiled programming language designed at Google by Robert Griesemer, Rob Pike, and Ken Thompson. It is syntactically similar to C, but with memory safety, garbage collection, structural typing, and CSP-style concurrency. The language was announced in November 2009 and is used in some of Google's production systems, as well as by many other businesses. 
+
+Concurrency is a core part of Go. Goroutines are lightweight threads managed by the Go runtime. You can spawn thousands, even millions of them. Channels are the pipes that connect concurrent goroutines, allowing them to communicate with one another and synchronize their execution. Don't communicate by sharing memory; instead, share memory by communicating. This is a fundamental Go proverb. 
+
+Let's test some edge cases. 
+Here is a sentence with numbers: 42, 3.14159, 1000000, and -5. 
+Here is a sentence with symbols: @#$%^&*()_+{}|:"<>? 
+Here is a sentence with different spacing.      Notice the gaps.	And a tab.
+What about contractions? Don't, can't, won't, shouldn't, couldn't, it's, we're, they've. 
+What about hyphenated phrases? well-known, state-of-the-art, up-to-date, mother-in-law. 
+
+Line counting is tricky. If a file ends with a newline, does it count as an extra line? 
+This is a new line.
+This is another new line.
+
+This line is separated by a blank line above.
+
+Unicode and Runes:
+Café, naïve, résumé, über, façade, jalapeño. 
+Japanese: こんにちは世界 (Hello World).
+Russian: Привет мир (Hello World).
+Arabic: مرحبا بالعالم (Hello World).
+Emojis: 😀 🚀 🔥 💻 🐹 (The Go gopher is cute).
+
+Let's repeat some words to test the frequency counter. 
+Go is great. Go is fast. Go is fun. Go is concurrent. 
+We love Go. You love Go. They love Go. Everyone loves Go. 
+When you write Go, you use packages. The standard library is powerful. The fmt package formats. The os package operates on the system. The strings package manipulates strings. The unicode package handles unicode. The bufio package buffers input and output.
+
+A very long word to test scanner buffers: SupercalifragilisticexpialidociousPneumonoultramicroscopicsilicovolcanoconiosisFloccinaucinihilipilification.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+
+The End. The quick brown fox jumps over the lazy dog one last time.
