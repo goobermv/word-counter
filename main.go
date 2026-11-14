@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"os"
 )
 
@@ -13,13 +14,10 @@ func main() {
 	fmt.Scanln(&fileName)
 
 	fmt.Println("\nReading file...")
-	data, err := os.ReadFile(fileName)
+	file, err := os.Open(fileName)
 	if err != nil {
-		panic(err)
+		log.Fatal(err)
 	}
-
-	fmt.Println("File name: " + fileName)
-	fmt.Printf("File size: %d", len(data))
-	fmt.Printf("File content: %s", data)
+	defer file.Close()
 
 }
