@@ -55,14 +55,14 @@ func main() {
 		return ss[i].Value > ss[j].Value
 	})
 
-	fmt.Println("\nTop most frequent words:")
+	fmt.Println("\nTop 10 most frequent words:")
 
-	count := 0
+	count := 1
 	for _, kv := range ss {
-		if count >= 10 {
+		if count > 10 {
 			break
 		}
-		fmt.Printf("%s, %d\n", kv.Key, kv.Value)
+		fmt.Printf("%d. %s - %d\n", count, kv.Key, kv.Value)
 		count++
 	}
 }
