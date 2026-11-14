@@ -1,9 +1,11 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
 	"log"
 	"os"
+	"strings"
 )
 
 func main() {
@@ -20,4 +22,21 @@ func main() {
 	}
 	defer file.Close()
 
+	scanner := bufio.NewScanner(file)
+	scanner.Split(bufio.ScanWords)
+
+	frequency := make(map[string]int)
+
+	for scanner.Scan() {
+		word := strings.ToLower(scanner.Text())
+		word = strings.Trim(word, ".,!?;:\"'()[]{}")
+
+		if word != "" {
+			frequency[word]++
+		}
+	}
+
+	if err := scanner.Err(); err != nil {
+		log.Fatal(err)
+	}
 }
